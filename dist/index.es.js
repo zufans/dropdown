@@ -1,5 +1,6 @@
 import React from 'react';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Dropdown({
   lable,

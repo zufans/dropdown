@@ -2,6 +2,7 @@
 
 var React = require('react');
 var NavDropdown = require('react-bootstrap/NavDropdown');
+require('bootstrap/dist/css/bootstrap.min.css');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
