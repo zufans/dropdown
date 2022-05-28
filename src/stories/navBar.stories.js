@@ -1,12 +1,14 @@
 import React from "react"
 import QuickNav from "../components/Navagtion/navigation-bar"
-import ZFNavItems from "../components/Navagtion/items"
-import ZFDropDownItem from "../components/Navagtion/dropDown"
+import Dropdown from "../components/Dropdown/dropdown"
+
+//import ZFDropDownItem from "../components/Navagtion/dropDown"
+import ZFNavItems from "../components/Dropdown/items"
 
 export default {
     title: "Navigation",
     component: QuickNav,
-    subcomponents : [ZFNavItems, ZFDropDownItem]
+    subcomponents : [Dropdown, ZFNavItems]
 }
 
 const navItemsLink = [
@@ -22,7 +24,7 @@ ItemOfMenu.args={
     lable:"Home"
 }
 
-const DropThatMenu = (args) => <ZFDropDownItem {...args} />;
+const DropThatMenu = (args) => <Dropdown {...args} />;
 /*export*/ const dropItems = DropThatMenu.bind({})
 dropItems.args={
     lable:navItemsLink,
@@ -37,9 +39,10 @@ export const Nav = Temp.bind({});
 Nav.args={
     dark: true,
     brand: "Kidus",
-    left: <ZFDropDownItem lable={navItemsLink} title="Left"/>,
-    center: navItemsLink.map(v => { return <ZFNavItems lable={v.lable} />}),
-    right: <ZFDropDownItem lable={navItemsLink} title="Right"/>,
+    left: <Dropdown lable={navItemsLink} title="Left"/>,
+    center: <Dropdown lable={navItemsLink} title="Left"/>,
+    //center: navItemsLink.map(v => { return <ZFNavItems lable={v.lable} />}),
+    right: <Dropdown lable={navItemsLink} title="Right"/>,
 }
 
 export const NavbarwithLogo = Temp.bind({});

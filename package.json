@@ -1,6 +1,6 @@
 {
   "name": "@zufans/dropdown",
-  "version": "1.1.5",
+  "version": "1.1.1",
   "description": "navigation-library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -14,8 +14,7 @@
     "build-lib": "rollup -c",
     "git": "sh ./pushToGit.sh",
     "pub": "sh ./publish.sh",
-    "auto": "sh ./auto.sh",
-    "gitFist" : "sh ./gitFristCommit.sh"
+    "auto": "sh ./auto.sh"
   },
   "keywords": [
     "React",

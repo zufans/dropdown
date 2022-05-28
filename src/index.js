@@ -1,5 +1,2 @@
-import QuickNav from './components/Navagtion'
-
-
-
-export default QuickNav
+import Dropdown from "./components/Dropdown";
+export default Dropdown
