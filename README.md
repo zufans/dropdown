@@ -30,10 +30,18 @@
 <h3>Example</h3>
 
 <code>
-const navItemsLink = [
-    {lable:"Home", onClick:()=> console.log('home'), href: "https://www.google.com"},
-    {lable:"About", onClick:()=> console.log('home'), href: "www.yahoo.com" },
-    {lable:"Contact", onClick:()=> console.log('home'), href: "https://reactjs.org/"}
-]
+function Drop(){<br>
+&nbsp; const navItemsProps = [<br>
+&nbsp;&nbsp;    {lable:"Home", onClick:()=> console.log('home'), href: "https://www.google.com"},<br>
+&nbsp;&nbsp;    {lable:"About", onClick:()=> console.log('home'), href: "www.yahoo.com" },<br>
+&nbsp;&nbsp;    {lable:"Contact", onClick:()=> console.log('home'), href: "https://reactjs.org/"}<br>
+]<br>
+</code>
+<code>
+  return(
+     <br>&nbsp; &ltDropdown itemProperty={navItemsProps} title="Title"/><br>
+&nbsp;  )<br>
+}
+<code>
 
 </code>
