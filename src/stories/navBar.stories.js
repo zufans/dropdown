@@ -1,27 +1,25 @@
 import React from "react"
-import QuickNav from "../components/Navagtion/navigation-bar"
+import QuickNav from "../components/Dropdown/navigation-bar"
 import Dropdown from "../components/Dropdown/dropdown"
-
-//import ZFDropDownItem from "../components/Navagtion/dropDown"
-import ZFNavItems from "../components/Dropdown/items"
+import Items from "../components/Dropdown/items"
 
 export default {
     title: "Navigation",
     component: QuickNav,
-    subcomponents : [Dropdown, ZFNavItems]
+    subcomponents : [Dropdown, Items]
 }
 
 const navItemsLink = [
-    {lable:"Home", onClick: console.log('home')},
-    {lable:"About", onClick: console.log('home')},
-    {lable:"Contact", onClick: console.log('home')}
+    {lable:"Home", onClick:()=> console.log('home')},
+    {lable:"About", onClick:()=> console.log('home')},
+    {lable:"Contact", onClick:()=> console.log('home')}
 ]
 
 
-const Items = (args) => <ZFNavItems {...args} />;
-const ItemOfMenu = Items.bind({})
+const ItemList = (args) => <Items {...args} />;
+export const ItemOfMenu = ItemList.bind({})
 ItemOfMenu.args={
-    lable:"Home"
+    lable:navItemsLink
 }
 
 const DropThatMenu = (args) => <Dropdown {...args} />;
@@ -32,16 +30,13 @@ dropItems.args={
 }
 
 
-
-
 const Temp = (args) => (<QuickNav {...args}/>);
 export const Nav = Temp.bind({});
 Nav.args={
     dark: true,
     brand: "Kidus",
     left: <Dropdown lable={navItemsLink} title="Left"/>,
-    center: <Dropdown lable={navItemsLink} title="Left"/>,
-    //center: navItemsLink.map(v => { return <ZFNavItems lable={v.lable} />}),
+    center: <Items lable={navItemsLink}/>,
     right: <Dropdown lable={navItemsLink} title="Right"/>,
 }
 

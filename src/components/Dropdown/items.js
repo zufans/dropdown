@@ -1,7 +1,20 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
-function ZFNavItems ({lable, onClick, style}){
-    return <Nav.Link style={{padding:5}} onClick={onClick}>{lable}</Nav.Link>
-  }
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-  export default ZFNavItems
+const navItemsLink = [
+  {lable:"Home", onClick:()=> console.log('home')},
+  {lable:"About", onClick:()=> console.log('About')},
+  {lable:"Contact", onClick:()=> console.log('Contact')}
+]
+
+function Items ({lable}){
+    return (
+      <Nav>
+        {lable.map((v, i)=>{
+          return <Nav.Link key={i} style={{padding:5}} onClick={v.onClick}>{v.lable}</Nav.Link>
+        })}
+      </Nav>
+    )
+  }
+  export default Items
